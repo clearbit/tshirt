@@ -1,5 +1,5 @@
 module Mailer extend self
-  def request!(request)
+  def shirt_request!(request)
     text = erb(:request_mail, locals: {request: request})
     html = markdown(text)
 
@@ -22,8 +22,8 @@ module Mailer extend self
 
   protected
 
-  def erb(*args)
-    app.erb(*args)
+  def erb(view, options = {})
+    app.erb(view, options.merge(layout: false))
   end
 
   def markdown(*args)

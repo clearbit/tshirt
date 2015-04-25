@@ -36,11 +36,26 @@ helpers do
   def h(text)
     Rack::Utils.escape_html(text)
   end
+
+  def states
+    Madison.states.inject({}) do |hash, state|
+      hash.merge(state['abbr'] => state['name'])
+    end
+  end
+
+  def asset_path(name)
+    "/assets/#{settings.assets[name].digest_path}"
+  end
+end
+
+get '/assets/*' do
+  env['PATH_INFO'].sub!(%r{^/assets}, '')
+  settings.assets.call(env)
 end
 
 post '/v1/requests' do
   shirt_request = ShirtRequest.create!(params.slice('email', 'size'))
-  ShirtRequestWorker.perform_async(shirt_request.id)
+  ShirtRequestWorker.new.perform(shirt_request.id)
   json shirt_request
 end
 
@@ -55,7 +70,7 @@ post '/requests/:id/confirm' do
   @shirt.confirmed = true
 
   if @shirt.save
-    'Thanks! Your TShirt is on its way.'
+    erb :request_confirmed
   else
     erb :request_confirm
   end
@@ -66,7 +81,7 @@ get '/requests/:id/confirm' do
   @shirt.confirmed = true
 
   if @shirt.save
-    'Thanks! Your TShirt is on its way.'
+    erb :request_confirmed
   else
     erb :request_confirm
   end

@@ -21,6 +21,13 @@ gem 'sidekiq'
 gem 'clearbit'
 gem 'redcarpet', '3.1.1'
 gem 'pg'
+gem 'erubis'
+gem 'madison'
+
+# Assets
+gem 'sprockets'
+gem 'stylus'
+gem 'stylus-source', '0.31.0'
 
 group :development do
   gem 'rerun'

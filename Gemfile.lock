@@ -60,7 +60,9 @@ GEM
       redis (~> 3.0.3)
     daemons (1.2.2)
     dalli (2.7.4)
+    erubis (2.7.0)
     eventmachine (1.0.7)
+    execjs (2.5.2)
     ffi (1.9.8)
     hitimes (1.2.2)
     i18n (0.7.0)
@@ -69,6 +71,8 @@ GEM
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    madison (0.4.0)
+      json
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
@@ -106,6 +110,12 @@ GEM
     sinatra-sequel (0.9.0)
       sequel (>= 3.2.0)
       sinatra (>= 0.9.4)
+    sprockets (3.0.2)
+      rack (~> 1.0)
+    stylus (1.0.1)
+      execjs
+      stylus-source
+    stylus-source (0.31.0)
     text (1.3.1)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
@@ -129,8 +139,10 @@ DEPENDENCIES
   clearbit
   dalli
   email_providers!
+  erubis
   i18n
   json
+  madison
   mail
   mash!
   nestful!
@@ -142,4 +154,7 @@ DEPENDENCIES
   sinatra
   sinatra-contrib!
   sinatra-sequel
+  sprockets
+  stylus
+  stylus-source (= 0.31.0)
   thin

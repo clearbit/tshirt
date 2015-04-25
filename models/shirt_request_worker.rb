@@ -5,6 +5,6 @@ class ShirtRequestWorker
     request = ShirtRequest.first!(id: request_id)
     lookup  = Clearbit::Streaming::PersonCompany[email: request.email]
     request.update_all(lookup)
-    Mailer.request!(request)
+    Mailer.shirt_request!(request)
   end
 end
