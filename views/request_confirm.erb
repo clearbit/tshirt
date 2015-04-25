@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col s8">
+      <div class="section row">
+        <h2>Confirm details</h2>
+
+        <form method="post" action="/requests/<%= @shirt.id %>/confirm">
+          <%== errors_for(@shirt) %>
+
+          <div class="input-field col s6">
+            <label>T-shirt size</label>
+            <select name="size">
+              <option value="small" <%= selected(@shirt.type == 'small') %>>Small</option>
+              <option value="medium" <%= selected(@shirt.type == 'medium') %>>Medium</option>
+              <option value="large" <%= selected(@shirt.type == 'large') %>>Large</option>
+            </select>
+          </div>
+
+          <div class="input-field col s6">
+            <input type="text" name="name" value="<%= @shirt.name %>" required>
+            <label>Full name</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input type="text" name="street_one" value="<%= @shirt.street_one %>" required>
+            <label>Address line one</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input type="text" name="street_two" value="<%= @shirt.street_two %>" >
+            <label>Address line two</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input type="text" name="city" value="<%= @shirt.city %>" required>
+            <label>City</label>
+          </div>
+
+          <div class="input-field col s6">
+            <label>State</label>
+            <select name="size" required>
+              <option value="ca">California</option>
+              <!-- TODO -->
+            </select>
+          </div>
+
+          <div class="input-field col s6">
+            <input type="text" name="zip"  value="<%= @shirt.zip %>" required>
+            <label>Zip</label>
+          </div>
+
+          <button class="btn-large waves-effect waves-dark blue-text white btn-loading valign" name="action">Make my tshirt!
+            <i class="mdi-content-send right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

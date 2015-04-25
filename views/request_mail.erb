@@ -1,0 +1,20 @@
+Hi there!
+
+Thanks for requesting a Clearbit T-shirt!
+
+<% if shirt_request.name? && shirt_request.address? %>
+Is this the correct information?
+
+<%= shirt_request.name %>,
+<%= shirt_request.street_one %>,
+<%= shirt_request.street_two %>,
+<%= shirt_request.city %>,
+<%= shirt_request.state %> <%= shirt_request.zip %>
+
+<a href="http://tshirt.clearbit.io/requests/<%= shirt_request.id %>/confirm">Yes</a> | <a href="http://tshirt.clearbit.io/requests/<%= request.id %>">Nope, not even close</a>
+<% else %>
+We just need to <a href="http://tshirt.clearbit.io/requests/<%= shirt_request.id %>">confirm some address data</a>.
+<% end %>
+
+Cheers,
+Clearbit TShirt Bot
