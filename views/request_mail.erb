@@ -5,11 +5,11 @@ Thanks for requesting a Clearbit T-shirt!
 <% if request.name? && request.address? %>
 Is this the correct information?
 
-<%= request.name %>,
-<%= request.street_one %>,
-<%= request.street_two %>,
-<%= request.city %>,
-<%= request.state %> <%= request.zip %>
+<%= request.name %>,<br />
+<%= request.street_one %>,<br />
+<%= request.street_two %>,<br />
+<%= request.city %>,<br />
+<%= request.state %> <%= request.zip %><br />
 
 <a href="http://tshirt-staging.clearbit.io/requests/<%= request.id %>/confirm">Yes</a> | <a href="http://tshirt-staging.clearbit.io/requests/<%= request.id %>">Nope, not even close</a>
 <% else %>

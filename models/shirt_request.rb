@@ -43,6 +43,10 @@ class ShirtRequest < Sequel::Model
     [company.geo.street_number, company.geo.street_name].compact.join(' ')
   end
 
+  def geo_state
+    Madison.get_abbrev(company.geo.state) || company.geo.state
+  end
+
   def set_defaults
     if person?
       self.name ||= person.name.full_name
@@ -52,7 +56,7 @@ class ShirtRequest < Sequel::Model
       self.street_one ||= geo_street_one
       self.street_two ||= company.geo.sub_premise
       self.city       ||= company.geo.city
-      self.state      ||= company.geo.state
+      self.state      ||= geo_state
       self.zip        ||= company.geo.postal_code
     end
   end
