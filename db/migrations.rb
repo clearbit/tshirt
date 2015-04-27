@@ -1,9 +1,9 @@
 require_relative '../app'
 
-migration "create requests" do
+migration "create shirt_requests" do
   database.run 'CREATE EXTENSION IF NOT EXISTS "uuid-ossp";'
 
-  database.create_table :requests do
+  database.create_table :shirt_requests do
     column :id, "uuid", :default=>Sequel::LiteralString.new("uuid_generate_v4()"), :null=>false
     column :iid, :serial, :null=>false
 
