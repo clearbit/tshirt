@@ -11,9 +11,9 @@ Is this the correct information?
 <%= request.city %>,
 <%= request.state %> <%= request.zip %>
 
-<a href="http://tshirt.clearbit.io/requests/<%= request.id %>/confirm">Yes</a> | <a href="http://tshirt.clearbit.io/requests/<%= request.id %>">Nope, not even close</a>
+<a href="http://tshirt-staging.clearbit.io/requests/<%= request.id %>/confirm">Yes</a> | <a href="http://tshirt-staging.clearbit.io/requests/<%= request.id %>">Nope, not even close</a>
 <% else %>
-We just need to <a href="http://tshirt.clearbit.io/requests/<%= request.id %>">confirm some address data</a>.
+We just need to <a href="http://tshirt-staging.clearbit.io/requests/<%= request.id %>">confirm some address data</a>.
 <% end %>
 
 Cheers,
