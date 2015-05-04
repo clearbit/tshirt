@@ -1,4 +1,10 @@
 # TShirt request API
 
-    curl http://tshirt-staging.clearbit.io/v1/requests -d email=alex@clearbit.com -d size=small
+Curl for a T-Shirt!
+
+## Example
+
+    curl https://tshirt.clearbit.com/v1/requests \
+            -d email=alex@clearbit.com \
+            -d size=small
 

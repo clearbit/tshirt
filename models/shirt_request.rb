@@ -34,7 +34,7 @@ class ShirtRequest < Sequel::Model
       city: city,
       state: state,
       zip: zip
-    }
+    }.select {|k,v| v.present? }
   end
 
   protected

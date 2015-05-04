@@ -7,7 +7,7 @@ module Mailer extend self
       from    'clearbit.com <team@clearbit.com>'
       to       request.email
       bcc      'sales+tshirt@clearbit.com'
-      subject  'Clearbit TShirt ShirtRequest'
+      subject  'Clearbit T-Shirt Request'
 
       text_part do
         body text
