@@ -46,6 +46,25 @@ helpers do
   def asset_path(name)
     "/assets/#{settings.assets[name].digest_path}"
   end
+
+  def redis
+    Redis.current
+  end
+
+  def disabled_error
+    {
+      error: {
+        type: 'disabled',
+        message: 'Sorry! All of our TShirts have gone.'
+      }
+    }
+  end
+
+  def check_disabled!
+    if redis.get('tshirt:disabled')
+      halt json(disabled_error)
+    end
+  end
 end
 
 get '/assets/*' do
@@ -54,8 +73,11 @@ get '/assets/*' do
 end
 
 post '/v1/requests' do
+  check_disabled!
+
   shirt_request = ShirtRequest.create!(params.slice('email', 'size'))
-  ShirtRequestWorker.new.perform(shirt_request.id)
+  ShirtRequestWorker.perform_async(shirt_request.id)
+
   json shirt_request
 end
 

@@ -1,10 +1,9 @@
-Hi there!
+Hello there,
 
 Thanks for requesting a T-Shirt!
 
 <% if request.name? && request.address? %>
 We just need to check a few things before sending it to you.
-
 Is this the correct mailing information?
 
 <%= request.name %>,<br />
@@ -13,10 +12,10 @@ Is this the correct mailing information?
 <%= request.city %>,<br />
 <%= request.state %> <%= request.zip %><br />
 
-<a href="https://tshirt.clearbit.com/requests/<%= request.id %>/confirm">Yes</a> | <a href="https://tshirt.clearbit.com/requests/<%= request.id %>">Nope, not even close</a>
+<a href="https://tshirt.clearbit.com/requests/<%= request.id %>/confirm">Yup</a> | <a href="https://tshirt.clearbit.com/requests/<%= request.id %>">Nope, not even close</a>
 <% else %>
 We just need to <a href="https://tshirt.clearbit.com/requests/<%= request.id %>">confirm your mailing address</a>.
 <% end %>
 
-Cheers,
+Cheers,<br />
 Clearbit T-Shirt Bot

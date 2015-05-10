@@ -23,6 +23,7 @@ gem 'redcarpet', '3.1.1'
 gem 'pg'
 gem 'erubis'
 gem 'madison'
+gem 'redis'
 
 # Assets
 gem 'sprockets'
