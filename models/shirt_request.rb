@@ -44,7 +44,9 @@ class ShirtRequest < Sequel::Model
   end
 
   def geo_state
-    Madison.get_abbrev(company.geo.state) || company.geo.state
+    if company.geo.state.present?
+      Madison.get_abbrev(company.geo.state) || company.geo.state
+    end
   end
 
   def set_defaults
