@@ -4,7 +4,7 @@ class ShirtRequestWorker
   def perform(request_id)
     request = ShirtRequest.first!(id: request_id)
 
-    lookup = nil
+    lookup = Mash.new(person: {}, company: {})
 
     begin
       lookup = Clearbit::Streaming::PersonCompany[email: request.email]
