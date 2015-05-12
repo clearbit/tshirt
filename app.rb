@@ -78,7 +78,10 @@ post '/v1/requests' do
   shirt_request = ShirtRequest.create!(params.slice('email', 'size'))
   ShirtRequestWorker.perform_async(shirt_request.id)
 
-  json shirt_request
+  json({
+    status:  'success',
+    message: "Your shirt was requested. We'll send you a follow up email."
+  })
 end
 
 get '/requests/:id' do
