@@ -67,6 +67,8 @@ helpers do
   end
 end
 
+use APIHub::Contrib::Middleware::Status, service: 'tshirt'
+
 get '/assets/*' do
   env['PATH_INFO'].sub!(%r{^/assets}, '')
   settings.assets.call(env)

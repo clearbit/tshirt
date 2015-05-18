@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/maccman/nestful.git
-  revision: 740e211b7009eb20fca668c5d75207b861393417
+  revision: 75563b188053e5ef613da522b2f43648a568553f
   specs:
     nestful (1.0.9)
 
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://f79ceb3130051b8c05fdb7e510749b2783e06954:x-oauth-basic@github.com/maccman/apihub-contrib.git
-  revision: c949b032c38a9fdc6e0ffd9f002a6f91b8b97e10
+  revision: d118b4ee49d58b5c929317fa17a5d6832310c247
   specs:
     apihub-contrib (0.0.8)
       activesupport
@@ -76,7 +76,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
-    minitest (5.6.0)
+    minitest (5.6.1)
     minuteman (1.0.3)
       redis (~> 3.0.3)
     multi_json (1.11.0)
@@ -96,7 +96,7 @@ GEM
       redis (~> 3.0, >= 3.0.4)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
-    sequel (4.21.0)
+    sequel (4.22.0)
     sidekiq (3.3.3)
       celluloid (>= 0.16.0)
       connection_pool (>= 2.1.1)
