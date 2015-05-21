@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://f79ceb3130051b8c05fdb7e510749b2783e06954:x-oauth-basic@github.com/maccman/apihub-contrib.git
-  revision: c9def57c97bdd477ee201809d154b6a19168023a
+  revision: 8135d7b117d43b61bb0e0a943351187f66ab5177
   specs:
     apihub-contrib (0.0.8)
       activesupport
