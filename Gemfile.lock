@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/maccman/nestful.git
-  revision: 75563b188053e5ef613da522b2f43648a568553f
+  revision: 56e6e031c92c8ccd9af45cf924f1ad533061ffd2
   specs:
     nestful (1.0.9)
 
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://f79ceb3130051b8c05fdb7e510749b2783e06954:x-oauth-basic@github.com/maccman/apihub-contrib.git
-  revision: d118b4ee49d58b5c929317fa17a5d6832310c247
+  revision: c9def57c97bdd477ee201809d154b6a19168023a
   specs:
     apihub-contrib (0.0.8)
       activesupport
