@@ -22,14 +22,16 @@ GIT
       tilt (~> 1.3)
 
 GIT
-  remote: https://f79ceb3130051b8c05fdb7e510749b2783e06954:x-oauth-basic@github.com/maccman/apihub-contrib.git
-  revision: 8135d7b117d43b61bb0e0a943351187f66ab5177
+  remote: https://f79ceb3130051b8c05fdb7e510749b2783e06954:x-oauth-basic@github.com/clearbit/apihub-contrib.git
+  revision: bfcd8135e3ddf6e65f748f2318d3f1dba10cd191
   specs:
     apihub-contrib (0.0.8)
       activesupport
       counterman (>= 0.0.3)
+      hashids
       minuteman
       nestful
+      pg
       redis
       sequel
 
@@ -64,6 +66,7 @@ GEM
     eventmachine (1.0.7)
     execjs (2.5.2)
     ffi (1.9.8)
+    hashids (1.0.2)
     hitimes (1.2.2)
     i18n (0.7.0)
     json (1.8.2)
@@ -159,3 +162,6 @@ DEPENDENCIES
   stylus
   stylus-source (= 0.31.0)
   thin
+
+BUNDLED WITH
+   1.10.6
