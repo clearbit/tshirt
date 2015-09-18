@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://f79ceb3130051b8c05fdb7e510749b2783e06954:x-oauth-basic@github.com/clearbit/apihub-contrib.git
-  revision: bfcd8135e3ddf6e65f748f2318d3f1dba10cd191
+  revision: 16e7769dbb1311c48891a5ab20ce8336e823337a
   specs:
     apihub-contrib (0.0.8)
       activesupport
